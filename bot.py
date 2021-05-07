@@ -215,11 +215,11 @@ def bot():
         sen,meme =incoming_msg.split('meme ')
         name,gender=meme.split(',')
         x = name.replace(" ", "%20")
-        url_p="https://belikebill.ga/billgen-API.php?default=1&name="+x+"&sex="+gender
+        url_p="https://api.imgflip.com/get_memes"
         msg.media(url_p)
         responded = True   
     if not responded:
-        msg.body('I am learning and growing day by day \n- Be_A_Nerd bot:)')
+        msg.body('I am learning and growing day by day \n- Edward's bot')
     return str(resp)
 
 
