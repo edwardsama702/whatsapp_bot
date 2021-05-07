@@ -210,16 +210,22 @@ def bot():
         # return a cat pic
         msg.media('https://cataas.com/cat')
         responded = True
+    # if 'meme' in incoming_msg:
+    #     # return a quote
+    #     sen,meme =incoming_msg.split('meme ')
+    #     url_p="https://api.imgflip.com/get_memes"
+    #     msg.media(url_p)
+    #     responded = True   
     if 'meme' in incoming_msg:
         # return a quote
         sen,meme =incoming_msg.split('meme ')
         name,gender=meme.split(',')
         x = name.replace(" ", "%20")
-        url_p="https://api.imgflip.com/get_memes"
+        url_p="https://belikebill.ga/billgen-API.php?default=1&name="+x+"&sex="+gender
         msg.media(url_p)
-        responded = True   
+        responded = True 
     if not responded:
-        msg.body('I am learning and growing day by day \n- Edward's bot')
+        msg.body('I am learning and growing day by day \n- Edward\'s bot')
     return str(resp)
 
 
